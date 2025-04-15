@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Experiments Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Tiny Experiments Companion</h1>
+    </header>
+    <main>
+      <section id="experiment-list">
+        <h2>Experimente</h2>
+        <ul id="experiment-list-ul"></ul>
+        <button id="add-experiment">Neues Experiment hinzufügen</button>
+      </section>
+      <section id="new-experiment" style="display: none;">
+        <h2>Neues Experiment</h2>
+        <label>Titel: <input type="text" id="new-title"></label>
+        <label>Beschreibung: <textarea id="new-description"></textarea></label>
+        <label>Startdatum: <input type="date" id="new-start-date"></label>
+        <label>Enddatum: <input type="date" id="new-end-date"></label>
+        <button id="create-experiment">Erstellen</button>
+        <button id="cancel-new">Abbrechen</button>
+      </section>
+      <section id="experiment-details" style="display: none;">
+        <h2>Experimentdetails</h2>
+        <label>Titel: <input type="text" id="details-title"></label>
+        <label>Beschreibung: <textarea id="details-description"></textarea></label>
+        <label>Startdatum: <input type="date" id="details-start-date"></label>
+        <label>Enddatum: <input type="date" id="details-end-date"></label>
+        <div>
+          <h3>Protokolle</h3>
+          <table id="logs-table">
+            <tr><th>Datum</th><th>Erledigt</th><th>Notizen</th></tr>
+          </table>
+          <div>
+            <h4>Protokoll hinzufügen</h4>
+            <input type="date" id="log-date">
+            <label><input type="checkbox" id="log-completed"> Erledigt</label>
+            <input type="text" id="log-notes" placeholder="Notizen">
+            <button id="add-log">Protokoll hinzufügen</button>
+          </div>
+        </div>
+        <label>Reflexion: <textarea id="details-reflection"></textarea></label>
+        <button id="save-experiment">Speichern</button>
+        <button id="delete-experiment">Löschen</button>
+        <button id="back-to-list">Zurück zur Liste</button>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
